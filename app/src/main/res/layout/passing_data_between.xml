@@ -23,7 +23,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        tools:layout_editor_absoluteX="13dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextText"
         tools:layout_editor_absoluteY="83dp" />
 
     <EditText
@@ -33,7 +33,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
         tools:layout_editor_absoluteY="140dp" />
 
     <Button
@@ -41,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="451dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="209dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
