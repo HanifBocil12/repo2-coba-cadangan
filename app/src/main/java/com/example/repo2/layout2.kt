@@ -13,6 +13,7 @@ class layout2:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout2)
 
+        val etName = Intent.get
         val button = findViewById<Button>(R.id.button2)
 
         button.setOnClickListener()

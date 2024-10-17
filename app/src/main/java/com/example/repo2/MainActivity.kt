@@ -3,6 +3,7 @@ package com.example.repo2
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,12 +20,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        var etName =;
+        var etId = findViewById<TextView>(R.id.etId).text.toString()
+        var etName = findViewById<TextView>(R.id.etName).text.toString()
         var button = findViewById<Button>(R.id.button3)
         button.setOnClickListener()
         {
 
             Intent(this, layout2::class.java).also { it ->
+                it.putExtra("e_name",etName)
+                it.putExtra("e_id",etId)
                 startActivity(it)
             }
         }
