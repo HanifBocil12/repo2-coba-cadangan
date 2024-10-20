@@ -21,16 +21,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         var etId = findViewById<TextView>(R.id.etId).text
-        var etName = findViewById<TextView>(R.id.etName)
-        var button = findViewById<Button>(R.id.button3)
-        button.setOnClickListener()
+        var etName = findViewById<TextView>(R.id.etName).text
+        var btn_swap = findViewById<Button>(R.id.btn_swap)
+        var btn_save = findViewById<Button>(R.id.btn_sv)
+        btn_save.setOnClickListener()
         {
 
             Intent(this, layout2::class.java).also { it ->
                 it.putExtra("e_name",etName.toString())
                 it.putExtra("e_id",etId.toString())
+            }
+        }
+
+        btn_swap.setOnClickListener()
+        {
+            Intent(this,layout2::class.java).also {
                 startActivity(it)
             }
+//            startActivity(AppCompatActivity(),layout2::class.java)
         }
 
 
