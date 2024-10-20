@@ -20,15 +20,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        var etId = findViewById<TextView>(R.id.etId).text.toString()
-        var etName = findViewById<TextView>(R.id.etName).text.toString()
+        var etId = findViewById<TextView>(R.id.etId).text
+        var etName = findViewById<TextView>(R.id.etName)
         var button = findViewById<Button>(R.id.button3)
         button.setOnClickListener()
         {
 
             Intent(this, layout2::class.java).also { it ->
-                it.putExtra("e_name",etName)
-                it.putExtra("e_id",etId)
+                it.putExtra("e_name",etName.toString())
+                it.putExtra("e_id",etId.toString())
                 startActivity(it)
             }
         }

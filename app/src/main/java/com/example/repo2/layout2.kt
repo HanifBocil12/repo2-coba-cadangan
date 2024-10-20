@@ -1,24 +1,24 @@
 package com.example.repo2
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class layout2:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout2)
 
-        val etName = Intent.get
+        val etName = findViewById<TextView>(R.id.textView)
+        val etId = findViewById<TextView>(R.id.textView2)
+
+        val valName = intent.getStringExtra("e_name")
+        val valId = intent.getStringExtra("e_id")
         val button = findViewById<Button>(R.id.button2)
 
-        button.setOnClickListener()
-        {
-            finish()
-        }
+
+        etName.text = "Nama: $valName"
+        etId.text = "Id: $valId"
     }
 }
