@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+//        cob
         var etId = findViewById<TextView>(R.id.etId).text
         var etName = findViewById<TextView>(R.id.etName).text
         var btn_swap = findViewById<Button>(R.id.btn_swap)
